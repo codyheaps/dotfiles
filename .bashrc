@@ -116,4 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# This is the alias for working with the dotfiles bare repository,
+# things like add, commit, push, etc. should be used with this instead.
 alias config='/usr/bin/git --git-dir=/home/codyheaps/dotfiles --work-tree=/home/codyheaps'
