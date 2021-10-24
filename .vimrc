@@ -88,8 +88,8 @@ let g:airline_section_b = '%{getcwd()}'
 
 " Leader key remaps
 let mapleader = " "
-nnoremap <leader>quit :q<CR>
-nnoremap <leader>save :w<CR>
+nnoremap ;q :q<CR>
+nnoremap ;s :w<CR>
 nnoremap B ^
 nnoremap E $
 vnoremap B ^
