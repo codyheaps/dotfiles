@@ -67,9 +67,9 @@ call plug#end()
 
 " Theme specifics
 colorscheme gruvbox-material
+let g:gruvbox_material_transparent_background = 1
 set background=dark
 let g:gruvbox_material_background = 'hard'
-let g:gruvbox_material_transparent_background = 1
 
 " Tabline/Statusline specifics
 " :h airline
@@ -89,7 +89,7 @@ let g:airline_section_b = '%{getcwd()}'
 " Leader key remaps
 let mapleader = " "
 nnoremap ;q :q<CR>
-nnoremap ;s :w<CR>
+nnoremap ;w :w<CR>
 nnoremap B ^
 nnoremap E $
 vnoremap B ^
