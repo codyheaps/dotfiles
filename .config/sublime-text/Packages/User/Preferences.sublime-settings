@@ -1,0 +1,39 @@
+{
+	"animation_enable": false,
+	"caret_extra_bottom": 0,
+	"caret_extra_top": 0,
+	"caret_extra_width": 1,
+	"caret_style": "blink",
+	"color_scheme": "Packages/Gruvbox Material Theme/Gruvbox Material Dark/Gruvbox Material Dark.sublime-color-scheme",
+	"draw_white_space": "none",
+	"ensure_newline_at_eof_on_save": true,
+	"font-size": 12,
+	"font_face": "Hack",
+	"gruvbox_folder_icons_square": true,
+	"gruvbox_highlight_active_tree_row": true,
+	"gruvbox_less_contrast": true,
+	"gruvbox_sidebar_comfortable": true,
+	"gruvbox_sidebar_font_size_10": true,
+	"gruvbox_sidebar_heading_bold": true,
+	"gruvbox_sidebar_indent_s": true,
+	"gruvbox_sidebar_label_bold": true,
+	"gruvbox_tabs_xs": true,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 2,
+	"margin": 0,
+	"match_selection": false,
+	"rulers":
+	[
+		120
+	],
+	"scroll_past_end": true,
+	"show_defintions": false,
+	"show_tab_close_buttons": true,
+	"theme": "gruvbox.sublime-theme",
+	"tree_animation_enabled":false
+}
