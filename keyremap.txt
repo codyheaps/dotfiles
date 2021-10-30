@@ -8,3 +8,7 @@ keycode 66 = Super_L
 keycode 133 = Caps_Lock
 add mod4 = Super_L
 add lock = Caps_Lock
+
+!
+! sudo dumpkeys > ~/.Xmodmap
+!
