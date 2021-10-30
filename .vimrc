@@ -91,17 +91,17 @@ let mapleader = " "
 nnoremap ;q :q<CR>
 nnoremap ;w :w<CR>
 nnoremap B ^
-nnoremap E $
+nnoremap E $l
 vnoremap B ^
-vnoremap E $
+vnoremap E $l
 nnoremap $ <nop>
 nnoremap ^ <nop>
 vnoremap $ <nop>
 vnoremap ^ <nop>
 " This is problematic if hjkl aren't usable with
 " mod+h,j,k,l for arrows, which I still need to do
-inoremap jk <esc>
-vnoremap jk <esc>
+inoremap jj <esc>
+vnoremap jj <esc>
 imap <esc> <nop>
 vmap <esc> <nop>
 
