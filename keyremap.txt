@@ -1,0 +1,10 @@
+!
+! Swap Caps_Lock and Super_L
+!
+
+remove mod4 = Super_L
+remove lock = Caps_Lock
+keycode 66 = Super_L
+keycode 133 = Caps_Lock
+add mod4 = Super_L
+add lock = Caps_Lock
