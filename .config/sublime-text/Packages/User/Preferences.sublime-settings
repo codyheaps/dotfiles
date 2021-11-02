@@ -1,10 +1,17 @@
 {
+	"translate_tabs_to_spaces": true,
+	"shift_tab_unindent": true,
+	"scroll_speed": 2.0,
+	"show_encoding": true,
+	"show_line_endings": true,
+	"reload_file_on_change": false,
 	"animation_enable": false,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
-	"caret_extra_width": 1,
+	"caret_extra_width": 2,
 	"caret_style": "blink",
 	"color_scheme": "Packages/Gruvbox Material Theme/Gruvbox Material Dark/Gruvbox Material Dark.sublime-color-scheme",
+	"theme": "gruvbox.sublime-theme",
 	"draw_white_space": "none",
 	"ensure_newline_at_eof_on_save": true,
 	"font-size": 12,
@@ -21,19 +28,17 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
 	],
-	"line_padding_bottom": 1,
+	"line_padding_bottom": 2,
 	"line_padding_top": 2,
 	"margin": 0,
 	"match_selection": false,
-	"rulers":
-	[
-		120
-	],
 	"scroll_past_end": true,
 	"show_defintions": false,
 	"show_tab_close_buttons": true,
-	"theme": "gruvbox.sublime-theme",
-	"tree_animation_enabled":false
+	"tree_animation_enabled":false,
+	"show_full_path": false,
+	"show_rel_path": true,
+	"show_project_first": true
 }
