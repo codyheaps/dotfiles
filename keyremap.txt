@@ -1,14 +1,5 @@
-!
-! Swap Caps_Lock and Super_L
-!
+1) sudo vim /usr/share/X11/xkb/symbols/pc
 
-remove mod4 = Super_L
-remove lock = Caps_Lock
-keycode 66 = Super_L
-keycode 133 = Caps_Lock
-add mod4 = Super_L
-add lock = Caps_Lock
+2) change all Lock to Super_L and save
 
-!
-! sudo dumpkeys > ~/.Xmodmap
-!
+3) rm -rf /var/lib/xkb/*
