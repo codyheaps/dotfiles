@@ -10,7 +10,7 @@ set infercase
 set backspace=indent,eol,start
 set scrolloff=10
 set sidescrolloff=4
-set tabstop=4
+set tabstop=4 
 set softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -44,7 +44,7 @@ set noerrorbells
 set mouse=a
 set ve+=onemore
 set confirm
-set spell
+" set spell
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " Plugin Manager
@@ -63,17 +63,21 @@ Plug 'junegunn/vim-plug'
 Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/limelight.vim'
+Plug 'ulwlu/elly.vim'
 call plug#end()
 
 " Theme specifics
-colorscheme gruvbox-material
-let g:gruvbox_material_transparent_background = 1
-set background=dark
-let g:gruvbox_material_background = 'hard'
+" colorscheme gruvbox-material
+" let g:gruvbox_material_transparent_background = 1
+" set background=dark
+" let g:gruvbox_material_background = 'hard'
+set termguicolors
+colorscheme elly
 
 " Tabline/Statusline specifics
 " :h airline
-let g:airline_theme='apprentice'
+let g:airline_theme='elly'
 let g:airline#extensions#tabline#enabled = 1
 " This is supposed to give full file paths in the tabline,
 " but it's not for some reason
@@ -82,28 +86,41 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_tab_count = 0
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline_section_b = '%{getcwd()}'
 
-" Leader key remaps
+" Limelight config
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+let g:limelight_default_coefficient = 0.7
+let g:limelight_paragraph_span = 1
+let g:limelight_bop = '^\s'
+let g:limelight_eop = '\ze\n^\s'
+let g:limelight_priority = -1
+
+" Remaps
 let mapleader = " "
-nnoremap ;q :q<CR>
-nnoremap ;w :w<CR>
-nnoremap B ^
-nnoremap E $l
-vnoremap B ^
-vnoremap E $l
-nnoremap $ <nop>
-nnoremap ^ <nop>
-vnoremap $ <nop>
-vnoremap ^ <nop>
+
+" Quit, Write, and Command Mode
+" nnoremap ;q :q<CR>
+" nnoremap ;w :w<CR>
+nnoremap ; :
+nnoremap ;; ;
+vnoremap ; :
+
+" jj to scape to normal mode
 " This is problematic if hjkl aren't usable with
 " mod+h,j,k,l for arrows, which I still need to do
 inoremap jj <esc>
 vnoremap jj <esc>
 imap <esc> <nop>
 vmap <esc> <nop>
+
+"Create a new line below with enter in normal mode
+nmap <CR> :a<CR><CR>.<CR>
 
 " Disable arrow keys in escape mode
 map <up> <nop>
