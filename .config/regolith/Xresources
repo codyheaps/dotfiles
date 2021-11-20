@@ -1,0 +1,12 @@
+i3-wm.bar.position: top
+i3-wm.font: Hack 12
+i3-wm.gaps.inner.size: 2
+i3-wm.gaps.outer.size: 0
+i3-wm.window.border.size: 2
+gnome.terminal.font: Hack 12
+gnome.terminal.scrollbar: never
+gnome.wallpaper: ~/Pictures/papers.co-ao38-totoro-art-illust-simple-cute-dark-1920x1080.jpg
+gnome.gtk.theme: lascaille
+gnome.wm.theme: lascaille
+regolith.look: lascaille
+rofi.theme: /etc/regolith/styles/lascaille/rofi.rasi
