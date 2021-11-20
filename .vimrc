@@ -65,6 +65,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/limelight.vim'
 Plug 'ulwlu/elly.vim'
+Plug 'chrisbra/Colorizer'
 call plug#end()
 
 " Theme specifics
@@ -74,6 +75,7 @@ call plug#end()
 " let g:gruvbox_material_background = 'hard'
 set termguicolors
 colorscheme elly
+highlight CursorLine guibg=#253340
 
 " Tabline/Statusline specifics
 " :h airline
