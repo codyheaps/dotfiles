@@ -1,12 +1,43 @@
+! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! #111A1F ! #2D3640                                                                !
+! #8D7856 ! #5A5A5A                                                                !
+! #798362 ! #810002                                                                !
+! #9B9257 ! #253340                                                                !
+! #63768A ! #012800                                                                !
+! #738C9C ! #340001                                                                !
+! #6998B3 ! #037500                                                                !
+! #9A9A9A ! #817E00                                                                !
+! #3E4859 ! #810002                                                                !
+!                                                                                  !
+! 0: Background           ! 6: Not Sure             ! 12: Not Sure                 !
+! 1: Under Cursor         ! 7: Files and Typed Text ! 13: Not Sure                 !
+! 2: User                 ! 8: Cursor               ! 14: Not Sure                 !
+! 3: Not Sure             ! 9: Not Sure             ! 15: Not Sure                 !
+! 4: Directories and Path ! 10: Not Sure            !                              !
+! 5: Not Sure             ! 11: Not Sure            !                              !
+! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+St.color0: #111A1F
+St.color1: #FFFFFF
+St.color2: #8D7856
+! St.color3:
+St.color4: #63768A
+! St.color5:
+! St.color6:
+St.color7: #9A9A9A
+St.color8: #798362
+! St.color9:
+! St.color10:
+! St.color11:
+! St.color12:
+! St.color13:
+! St.color14:
+! St.color15:
+St.font: Hack 12
 i3-wm.bar.position: top
 i3-wm.font: Hack 12
-i3-wm.gaps.inner.size: 2
+i3-wm.gaps.inner.size: 1
 i3-wm.gaps.outer.size: 0
 i3-wm.window.border.size: 2
 gnome.terminal.font: Hack 12
 gnome.terminal.scrollbar: never
 gnome.wallpaper: ~/Pictures/papers.co-ao38-totoro-art-illust-simple-cute-dark-1920x1080.jpg
-gnome.gtk.theme: lascaille
-gnome.wm.theme: lascaille
-regolith.look: lascaille
-rofi.theme: /etc/regolith/styles/lascaille/rofi.rasi
