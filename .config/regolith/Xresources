@@ -31,14 +31,14 @@ St.color8: #798362
 ! St.color13:
 ! St.color14:
 ! St.color15:
-St.font: JetBrains Mono 12
+St.font: Source Code Pro Medium 11
 i3-wm.bar.position: top
 i3-wm.bar.background.color: #202020
-i3-wm.font: JetBrains Mono 12
+i3-wm.font: Source Code Pro Medium 11
 i3-wm.gaps.inner.size: 1
 i3-wm.gaps.outer.size: 0
 i3-wm.window.border.size: 2
-i3xrocks.value.font: JetBrains Mono 12
-gnome.terminal.font: JetBrains Mono 12
+i3xrocks.value.font: Source Code Pro Medium 11
+gnome.terminal.font: Source Code Pro Medium 11
 gnome.terminal.scrollbar: never
 gnome.wallpaper: ~/Pictures/papers.co-ao38-totoro-art-illust-simple-cute-dark-1920x1080.jpg
