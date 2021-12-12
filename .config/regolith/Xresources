@@ -42,7 +42,5 @@ i3xrocks.value.font: Source Code Pro Medium 11
 gnome.terminal.font: Source Code Pro Medium 11
 gnome.terminal.scrollbar: never
 gnome.wallpaper: ~/Pictures/papers.co-ao38-totoro-art-illust-simple-cute-dark-1920x1080.jpg
-gnome.gtk.theme: Ayu-Mirage-Dark
-gnome.wm.theme: Ayu-Mirage-Dark
-regolith.look: ayu-mirage
+regolith.look: ayu-dark
 rofi.font:  Source Code Pro Medium 11
