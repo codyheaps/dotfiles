@@ -58,6 +58,9 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
     \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
+" Jump to last position when reopening a file
+au BufReadPost * if line ("'\"") > 1 && line("'\"") <= line ("$") | exe "normal! g'\"" | endif
+
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
 Plug 'sainnhe/gruvbox-material'
@@ -66,6 +69,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/limelight.vim'
 Plug 'ulwlu/elly.vim'
 Plug 'chrisbra/Colorizer'
+Plug 'davinche/whitespace-vim'
 call plug#end()
 
 " Theme specifics
@@ -106,20 +110,19 @@ let g:limelight_priority = -1
 " Remaps
 let mapleader = " "
 
-" Quit, Write, and Command Mode
-" nnoremap ;q :q<CR>
-" nnoremap ;w :w<CR>
+" Semicolon to colon for ease-of-access
 nnoremap ; :
 nnoremap ;; ;
 vnoremap ; :
 
-" jj to scape to normal mode
-" This is problematic if hjkl aren't usable with
-" mod+h,j,k,l for arrows, which I still need to do
+" jj to escape to normal mode
 inoremap jj <esc>
 vnoremap jj <esc>
+" command mode <C-C> because esc runs the command
+cnoremap jj <C-C>
 imap <esc> <nop>
 vmap <esc> <nop>
+cmap <esc> <nop>
 
 "Create a new line below with enter in normal mode
 nmap <CR> :a<CR><CR>.<CR>
