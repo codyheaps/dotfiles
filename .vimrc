@@ -8,9 +8,9 @@ set ignorecase
 set smartcase
 set infercase
 set backspace=indent,eol,start
+set sidescrolloff=10
 set scrolloff=10
-set sidescrolloff=4
-set tabstop=4 
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -49,13 +49,13 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " Plugin Manager
 if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vimautoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        	\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-    \| PlugInstall --sync | source $MYVIMRC
+	autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+		\| PlugInstall --sync | source $MYVIMRC
 \| endif
 
 " Jump to last position when reopening a file
@@ -64,26 +64,27 @@ au BufReadPost * if line ("'\"") > 1 && line("'\"") <= line ("$") | exe "normal!
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
 Plug 'sainnhe/gruvbox-material'
+Plug 'ayu-theme/ayu-vim'
+Plug 'ulwlu/elly.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/limelight.vim'
-Plug 'ulwlu/elly.vim'
 Plug 'chrisbra/Colorizer'
 Plug 'davinche/whitespace-vim'
 call plug#end()
 
 " Theme specifics
-" colorscheme gruvbox-material
-" let g:gruvbox_material_transparent_background = 1
-" set background=dark
-" let g:gruvbox_material_background = 'hard'
 set termguicolors
-colorscheme elly
+colorscheme gruvbox-material
+let g:gruvbox_material_transparent_background = 1
+" Hard has to be before dark
+let g:gruvbox_material_background = 'hard'
+set background=dark
 highlight CursorLine guibg=#253340
 
 " Tabline/Statusline specifics
 " :h airline
-let g:airline_theme='elly'
+let g:airline_theme='apprentice'
 let g:airline#extensions#tabline#enabled = 1
 " This is supposed to give full file paths in the tabline,
 " but it's not for some reason
@@ -107,8 +108,10 @@ let g:limelight_bop = '^\s'
 let g:limelight_eop = '\ze\n^\s'
 let g:limelight_priority = -1
 
+let g:strip_whitespace_on_save = 0
+
 " Remaps
-let mapleader = " "
+let mapleader = ' '
 
 " Semicolon to colon for ease-of-access
 nnoremap ; :
