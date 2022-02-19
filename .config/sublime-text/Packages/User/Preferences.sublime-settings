@@ -1,21 +1,28 @@
+// Packages
+//
+// A File Icon
+// AutoFileName
+// BracketHighlighter
+// ClojureDocSearch
+// gruvbox
+// Gruvbox Material Theme
+// MarkdownEditing
+// Package Control
+// RainbowBrackets
+// SideBarEnhancements
+// View In Browser
+
+// Settings
 {
-	"translate_tabs_to_spaces": true,
-	"shift_tab_unindent": true,
-	"scroll_speed": 2.0,
-	"show_encoding": true,
-	"show_line_endings": true,
-	"reload_file_on_change": false,
-	"animation_enable": false,
+	"animation_enabled": false,
+	// Caret
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
-	"caret_extra_width": 2,
+	"caret_extra_width": 1,
 	"caret_style": "blink",
+	// Scheme, Theme, and Sidebar
 	"color_scheme": "Packages/Gruvbox Material Theme/Gruvbox Material Dark/Gruvbox Material Dark.sublime-color-scheme",
 	"theme": "gruvbox.sublime-theme",
-	"draw_white_space": "none",
-	"ensure_newline_at_eof_on_save": true,
-	"font-size": 12,
-	"font_face": "Hack",
 	"gruvbox_folder_icons_square": true,
 	"gruvbox_highlight_active_tree_row": true,
 	"gruvbox_less_contrast": true,
@@ -25,20 +32,39 @@
 	"gruvbox_sidebar_indent_s": true,
 	"gruvbox_sidebar_label_bold": true,
 	"gruvbox_tabs_xs": true,
+	"show_tab_close_buttons": true,
+	// Font
+	"font_face": "Source Code Pro",
+	"font_size": 10,
+	// Misc
 	"highlight_line": true,
-	"ignored_packages":
-	[
-		"Vintage",
-	],
+	"highlight_gutter": true,
+	"highlight_line_number": true,
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
 	"margin": 0,
 	"match_selection": false,
 	"scroll_past_end": true,
-	"show_defintions": false,
-	"show_tab_close_buttons": true,
-	"tree_animation_enabled":false,
+	"show_definitions": false,
+	"tree_animation_enabled": false,
+	"draw_white_space": "none",
+	"ensure_newline_at_eof_on_save": true,
+	"show_project_first": true,
 	"show_full_path": false,
 	"show_rel_path": true,
-	"show_project_first": true
+	"line_numbers": true,
+	"translate_tabs_to_spaces": true,
+	"use_tab_stops": true,
+	"tab_size": 4,
+	"shift_tab_unindent": true,
+	// Lists
+	"ignored_packages":
+	[
+		"Vintage",
+		"Markdown",
+	],
+	"rulers":
+	[
+		120
+	],
 }
