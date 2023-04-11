@@ -2,4 +2,3 @@ awscli
 gnupg
 leiningen
 python
-romkatv/powerlevel10k/powerlevel10k

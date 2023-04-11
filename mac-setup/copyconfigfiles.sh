@@ -13,7 +13,7 @@ echo "Relocating existing dotfiles to ~/dotfiles_old..."
 for file in $files;
 do
     mv ~/$file ~/dotfiles_old
-    echo "Creating symlink for $file..."
-    ln -s ~/dotfiles/$file ~/$file
+    echo "Copying $file to ~ from ~/dotfiles..."
+    cp ~/dotfiles/$file ~/$file
 done
 
