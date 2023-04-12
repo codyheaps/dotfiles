@@ -2,7 +2,6 @@ aws-vpn-client
 ccleaner
 cyberduck
 datagrip
-docker
 firefox
 intellij-idea
 iterm2
