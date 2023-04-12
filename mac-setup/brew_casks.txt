@@ -3,7 +3,7 @@ ccleaner
 cyberduck
 datagrip
 docker
-firefox-developer-edition
+firefox
 intellij-idea
 iterm2
 microsoft-excel
