@@ -67,7 +67,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
 Plug 'sainnhe/gruvbox-material'
 Plug 'ayu-theme/ayu-vim'
-Plug 'ulwlu/elly.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/limelight.vim'

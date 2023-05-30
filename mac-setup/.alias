@@ -1,1 +1,38 @@
-alias l="ls -la"
+# General use
+alias lnp-env="cd ~/LMS-Projects/loanpro-devenv" # Go to dev-env folder
+alias lnp="cd ~/LMS-Projects/loanpro" # Go to LMS folder
+alias lnp-up="lnp-env && docker compose up -d web" # Starts LMS
+alias lnp-down="lnp-env && docker compose stop web" # Stops LMS
+
+# Composer
+alias lnp-compose="lnp-env && docker compose up composer" # Runs composer
+alias lnp-compose-fix="lnp-env && docker exec api_phpfpm bash -c \"cd /fandora/webroot/api && rm -rf vendor\" && lnp-compose" # Removes packages and updates composer
+
+# Migrations
+alias lnp-m="cd ~/LMS-Projects/loanpro-db-migrations" # Go to migrations folder
+alias lnp-migrate="lnp-m && git pull && lnp-env && docker compose up migrations" # Go to migrations folder
+
+# Elastic
+alias lnp-index="lnp-env && docker compose up indexer" # Runs indexer
+
+# LMS Angular
+alias lnp-validate="docker exec ui_php_apache bash -c \"npm run check\"" # Runs grunt check
+
+# LMS API
+alias lnp-api-it="docker exec -w /fandora/webroot/api/ -it api_phpfpm bash" # Go to the api commands folder
+alias lnp-api-test="docker exec  -w /fandora/webroot/api/ api_phpfpm  bash -c \"php vendor/bin/phpunit tests/Unit/\""
+alias lnp-reset-default-user="docker exec api_phpfpm bash -c \"php /fandora/webroot/api/bin/cli.php tools:user:password --user=1 --password='loanprotemp'\"" # Go to migrations folder
+
+# LMS Vue
+alias lnp-v2="cd ~/LMS-Projects/loanpro/webroot/lms-ui" # Go to ui-v2 folder
+alias lnp-v2-up="lnp-env && docker compose up ui-v2-node" # Starts ui-v2 dev server
+alias lnp-v2-it="lnp-env && docker exec -it ui_v2_node bash" # Access ui-v2 container
+alias lnp-v2-components="docker exec ui_v2_node bash -c \"yarn ca:login && yarn remove loanpro-ui && yarn add loanpro-ui\"" # Updates component library
+alias lnp-v2-pretty="docker exec ui_v2_node bash -c \"yarn pretty\"" # Runs prettier
+alias lnp-v2-pack="docker exec ui_v2_node bash -c \"yarn build\"" # Runs build
+alias lnp-v2-test="docker exec ui_v2_node bash -c \"yarn test:unit\"" # Runs tests
+alias lnp-v2-lint="docker exec ui_v2_node bash -c \"yarn lint\"" # Runs linter
+alias lnp-v2-lint-fix="docker exec ui_v2_node bash -c \"yarn lint:fix\"" # Runs linter
+
+# CLJ
+alias clj-lint="clj-kondo --lint src"
