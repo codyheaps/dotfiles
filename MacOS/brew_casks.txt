@@ -14,5 +14,4 @@ pycharm
 raycast
 session-manager-plugin
 slack
-sublime-text
 topnotch

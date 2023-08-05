@@ -1,4 +1,7 @@
 awscli
 gnupg
 leiningen
+neovim
 python
+ripgrep
+tmux
