@@ -1,0 +1,4 @@
+awscli
+gnupg
+leiningen
+python
