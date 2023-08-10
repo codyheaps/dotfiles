@@ -6,8 +6,8 @@ files=".alias .vimrc .zshrc .p10k.zsh"
 echo "Creating ~/dotfiles_old for backup of existing dotfiles..."
 mkdir -p ~/dotfiles_old
 
-echo "Changing to ~/dotfiles/MacOS..."
-cd ~/dotfiles/MacOS
+echo "Changing to ~/dotfiles/macos..."
+cd ~/dotfiles/macos
 
 # relocate existing dotfiles to dotfiles_old, then copy files from dotfiles to ~
 echo "Relocating existing dotfiles to ~/dotfiles_old..."
@@ -16,6 +16,6 @@ do
     touch ~/$file
     mv ~/$file ~/dotfiles_old
     echo "Making symlink to ~/$file from ~/dotfiles..."
-    ln -s ~/dotfiles/MacOS/$file ~/$file
+    ln -s ~/dotfiles/macos/$file ~/$file
 done
 
