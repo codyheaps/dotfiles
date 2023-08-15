@@ -1,4 +1,3 @@
--- TODO: Figure out : command suggestions
 return {
     "tpope/vim-sleuth",
     "tpope/vim-surround",

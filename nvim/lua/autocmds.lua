@@ -19,3 +19,5 @@ vim.api.nvim_create_autocmd('BufEnter',
         vim.opt.comments:remove(':%')
     end,
 })
+
+vim.api.nvim_command("hi! CursorLine guifg=none guibg=#303030")

@@ -70,5 +70,25 @@ return {
                 show_end_of_line = false
             }
         end
+    },
+    {
+        "folke/twilight.nvim",
+        opts = {
+            dimming = {
+                alpha = 0.50,
+                color = { "Normal", "#ffffff" },
+                term_bg = "#000000",
+                inactive = false
+            },
+            context = 10,
+            treesitter = true,
+            expand = {
+                "function",
+                "method",
+                "table",
+                "if_statement"
+            },
+            exclude = {}
+        }
     }
 }
