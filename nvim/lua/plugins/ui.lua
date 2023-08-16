@@ -78,7 +78,9 @@ return {
         config = function()
             vim.opt.list = true
             require("indent_blankline").setup {
-                show_end_of_line = false
+                show_end_of_line = false,
+                show_first_indent_level = false,
+                char = "¦"
             }
         end
     },
@@ -100,6 +102,23 @@ return {
                 "if_statement"
             },
             exclude = {}
+        }
+    },
+    {
+        "folke/zen-mode.nvim",
+        opts = {
+            window = {
+                width = .70,
+                height = .95
+            },
+            plugins = {
+                twilight = {
+                    enabled = true
+                },
+                gitsigns = {
+                    enabled = true
+                }
+            }
         }
     }
 }
