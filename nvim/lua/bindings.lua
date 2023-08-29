@@ -17,16 +17,14 @@ end
 vim.keymap.set({'n', 'v'}, '<Space>', '<Nop>', {silent = true})
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", {expr = true, silent = true})
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", {expr = true, silent = true})
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {desc = 'Go to previous diagnostic message'})
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {desc = 'Go to next diagnostic message'})
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {desc = 'Open floating diagnostic message'})
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, {desc = 'Open diagnostics list'})
 
 nmap("r", "<C-r>", "[r]edo")
 nmap("n", "nzzzv", "Keep found string centered")
 nmap("N", "Nzzzv", "Keep found string centered")
 nmap("<leader>pv", vim.cmd.Ex, "[p]roject [v]iew")
+nmap("<leader>rfn", ":let @+=@%<CR>", "[r]elative [f]ile [n]ame")
 
+vmap("<leader>join", "<S-j>", "Line join")
 vmap("J", ":m '>+1<CR>gv=gv", "Move selection down")
 vmap("K", ":m '<-2<CR>gv=gv", "Move selection up")
 

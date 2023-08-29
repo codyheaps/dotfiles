@@ -1,6 +1,6 @@
 #! /bin/sh
 
-files=".alias .vimrc .zshrc .p10k.zsh"
+files=".alias .ideavimrc .vimrc .zshrc .p10k.zsh"
 # TODO: add a directories symlink process for nvim etc.
 
 echo "Creating ~/dotfiles_old for backup of existing dotfiles..."

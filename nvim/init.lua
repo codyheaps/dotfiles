@@ -1,4 +1,4 @@
--- bootstrap lazy plugin manager
+-- Bootstrap lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -12,15 +12,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- performance
+-- Performance
 require('lazy.core.cache').enable()
 
--- load opt settings, keymap bindings, and auto commands
+-- Load opt settings, keymap bindings, and auto commands
 require('options')
 require('bindings')
 require('autocmds')
 
--- load installed plugins and their configs
+-- Load installed plugins and their configs
 require('lazy').setup('plugins', {
 	-- defaults = { lazy = true },
 	-- checker= { enabled = true },

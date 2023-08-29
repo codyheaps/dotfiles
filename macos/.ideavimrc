@@ -1,0 +1,49 @@
+let mapleader = " "
+let maplocalleader = " "
+
+" Vim sets
+set nocompatible
+set guicursor=a:block-Cursor
+set guicursor+=a:blinkon0
+set mouse="a"
+set number
+set relativenumber
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set breakindent
+set smartindent
+set nowrap
+set incsearch
+set ignorecase
+set smartcase
+set scrolloff=20
+
+" IdeaVim specific
+set ideajoin
+set ideamarks
+set showmode
+set showcmd
+
+" Plugins
+Plug "tpope/vim-surround"
+Plug "tpope/vim-commentary"
+Plug "machakann/vim-highlightedyank"
+
+" Vim key mappings
+nmap r <C-r>
+nmap n nzzzv
+nmap N Nzzzv
+map J :m '>+1<CR>gv=gv
+map K :m '<-2<CR>gv=gv
+map <leader>p "_d
+map <leader>y "+y
+map <leader>p "_d
+
+" IdeaVim action mappings
+nmap <leader>bp <Action>(ToggleLineBreakpoint)
+nmap <leader>db <Action>(PhpListenDebugAction)
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+vmap <leader>fm <Action>(ReformatCode)

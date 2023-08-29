@@ -1,5 +1,6 @@
 awscli
 gnupg
+lazygit
 leiningen
 neovim
 python

@@ -25,14 +25,26 @@ return {
         branch = "v2.x",
         dependencies = {
             -- LSP
-            {"neovim/nvim-lspconfig"},
-            {"williamboman/mason.nvim"},
-            {"williamboman/mason-lspconfig.nvim"},
+            {
+                "neovim/nvim-lspconfig"
+            },
+            {
+                "williamboman/mason.nvim"
+            },
+            {
+                "williamboman/mason-lspconfig.nvim"
+            },
 
             -- Autocomplete
-            {"hrsh7th/nvim-cmp"},
-            {"hrsh7th/cmp-nvim-lsp"},
-            {"L3MON4D3/LuaSnip"}
+            {
+                "hrsh7th/nvim-cmp"
+            },
+            {
+                "hrsh7th/cmp-nvim-lsp"
+            },
+            {
+                "L3MON4D3/LuaSnip"
+            }
         },
         event = "VeryLazy",
         config = function()
@@ -63,6 +75,9 @@ return {
             lsp.setup()
 
             vim.diagnostic.config({
+                globals = {
+                    "vim"
+                },
                 virtual_text = true
             })
         end

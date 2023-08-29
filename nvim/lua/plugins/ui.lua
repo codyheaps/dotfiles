@@ -42,27 +42,48 @@ return {
         config = function()
             require("gitsigns").setup {
                 signs = {
-                    add = {text = "+"},
-                    change = {text = "~"},
-                    delete = {text = "_"},
-                    topdelete = {text = "‾"},
-                    changedelete = {text = "~"}
+                    add = {
+                        text = "+"
+                    },
+                    change = {
+                        text = "~"
+                    },
+                    delete = {
+                        text = "_"
+                    },
+                    topdelete = {
+                        text = "‾"
+                    },
+                    changedelete = {
+                        text = "~"
+                    }
                 },
-                on_attach = function(bufnr)
+                on_attach = function()
                     local gs = package.loaded.gitsigns
 
-                    vim.keymap.set("n", "<leader>tb", gs.toggle_current_line_blame, {desc = "[T]oggle Line [B]lame"})
-                    vim.keymap.set("n", "<leader>nh", gs.next_hunk, {desc = "[N]ext [H]unk"})
-                    vim.keymap.set("n", "<leader>lh", gs.prev_hunk, {desc = "[L]ast [H]unk"})
-                    vim.keymap.set("n", "<leader>ph", gs.preview_hunk, {desc = "[P]review [H]unk"})
-                    vim.keymap.set("n", "<leader>rh", gs.reset_hunk, {desc = "[R]eset [H]unk"})
+                    vim.keymap.set("n", "<leader>tb", gs.toggle_current_line_blame, {desc = "[t]oggle line [b]lame"})
+                    vim.keymap.set("n", "<leader>nh", gs.next_hunk, {desc = "[n]ext [h]unk"})
+                    vim.keymap.set("n", "<leader>lh", gs.prev_hunk, {desc = "[l]ast [h]unk"})
+                    vim.keymap.set("n", "<leader>ph", gs.preview_hunk, {desc = "[p]review [h]unk"})
+                    vim.keymap.set("n", "<leader>rh", gs.reset_hunk, {desc = "[r]eset [h]unk"})
+
+                    vim.api.nvim_command("hi GitSignsCurrentLineBlame guifg=#83A598")
                 end
             }
         end
     },
     {
+        "chentoast/marks.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("marks").setup {}
+        end
+    },
+    {
         "folke/todo-comments.nvim",
-        dependencies = {"nvim-lua/plenary.nvim"},
+        dependencies = {
+            "nvim-lua/plenary.nvim"
+        },
         opts = {}
     },
     {
@@ -80,7 +101,8 @@ return {
             require("indent_blankline").setup {
                 show_end_of_line = false,
                 show_first_indent_level = false,
-                char = "¦"
+                char = "¦",
+                show_current_context = true
             }
         end
     },
@@ -89,7 +111,10 @@ return {
         opts = {
             dimming = {
                 alpha = 0.50,
-                color = { "Normal", "#ffffff" },
+                color = {
+                    "Normal",
+                    "#ffffff"
+                },
                 term_bg = "#000000",
                 inactive = false
             },
@@ -110,15 +135,15 @@ return {
             window = {
                 width = .70,
                 height = .95
-            },
-            plugins = {
-                twilight = {
-                    enabled = true
-                },
-                gitsigns = {
-                    enabled = true
-                }
             }
-        }
+      }
+    },
+    {
+        "folke/trouble.nvim",
+        opts = {},
+        config = function ()
+            vim.keymap.set("n", "<leader>xx", function() require("trouble").open("document_diagnostics") end)
+            vim.keymap.set("n", "<leader>Xx", function() require("trouble").close() end)
+        end
     }
 }

@@ -1,0 +1,43 @@
+-- TODO: Figure out how tf to get this to work
+return {
+    -- {
+    --     "mfussenegger/nvim-dap",
+    --     config = function()
+    --         local dap = require("dap")
+    --         dap.adapters.php = {
+    --             type = "executable",
+    --             command = "node",
+    --             args = {
+    --                 os.getenv("HOME") .. "/vscode-php-debug/out/phpDebug.js"
+    --             },
+    --             host = "local.simnang.com",
+    --             port = 80
+    --         }
+    --
+    --         dap.configurations.php = {
+    --             {
+    --                 type = "php",
+    --                 request = "launch",
+    --                 name = "Listen for Xdebug",
+    --                 port = 9003,
+    --                 program = "${file}"
+    --             }
+    --         }
+    --
+    --         vim.keymap.set("n", "<leader>bp", dap.toggle_breakpoint, {desc = 'Toggle [b]reak[p]oint'})
+    --         vim.keymap.set("n", "<leader>db", dap.continue, {desc = '[d]e[b]ug'})
+    --         vim.keymap.set("n", "<leader>so", dap.step_over, {desc = '[s]tep [o]ver'})
+    --         vim.keymap.set("n", "<leader>si", dap.step_into, {desc = '[s]tep [i]nto'})
+    --     end
+    -- },
+    -- {
+    --     "rcarriga/nvim-dap-ui",
+    --     requires = {
+    --         "mfussenegger/nvim-dap"
+    --     }
+    -- },
+    -- {
+    --     "nvim-treesitter/nvim-treesitter",
+    --     "theHamsta/nvim-dap-virtual-text"
+    -- }
+}

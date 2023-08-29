@@ -4,7 +4,11 @@ return {
         "clojure-vim/vim-jack-in",
         "radenling/vim-dispatch-neovim",
         "Olical/conjure",
-        ft = { "clojure", "fennel", "python" },
+        ft = {
+            "clojure",
+            "fennel",
+            "python"
+        },
         dependencies = {
             {
                 "PaterJason/cmp-conjure",
@@ -15,7 +19,9 @@ return {
                         name = "buffer",
                         option = {
                             sources = {
-                                {name = "conjure"}
+                                {
+                                    name = "conjure"
+                                }
                             }
                         }
                     })
@@ -23,7 +29,7 @@ return {
                 end
             }
         },
-        config = function(_, opts)
+        config = function(_, _opts)
             require("conjure.main").main()
             require("conjure.mapping")["on-filetype"]()
         end,
