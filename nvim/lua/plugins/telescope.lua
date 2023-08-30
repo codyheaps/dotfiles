@@ -50,6 +50,8 @@ return {
                 table.insert(vimgrep_arguments, "-u")
                 builtin.live_grep()
             end)
+
+            vim.keymap.set("n", "<leader>buf", builtin.buffers)
         end
     }
 }

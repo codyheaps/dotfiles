@@ -143,7 +143,7 @@ return {
         opts = {},
         config = function ()
             vim.keymap.set("n", "<leader>xx", function() require("trouble").open("document_diagnostics") end)
-            vim.keymap.set("n", "<leader>Xx", function() require("trouble").close() end)
+            vim.keymap.set("n", "<leader>xX", function() require("trouble").close() end)
         end
     }
 }

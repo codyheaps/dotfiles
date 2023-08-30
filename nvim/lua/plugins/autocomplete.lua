@@ -48,9 +48,7 @@ return {
         },
         event = "VeryLazy",
         config = function()
-            local lsp = require("lsp-zero")
-
-            lsp.preset("recommended")
+            local lsp = require("lsp-zero").preset("recommended")
 
             local cmp = require("cmp")
             local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -72,12 +70,11 @@ return {
                 client.server_capabilities.semanticTokensProvider = nil
             end)
 
+            require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
+
             lsp.setup()
 
             vim.diagnostic.config({
-                globals = {
-                    "vim"
-                },
                 virtual_text = true
             })
         end
