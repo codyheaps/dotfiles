@@ -1,0 +1,17 @@
+#!/bin/bash
+
+source "$HOME/dotfiles/install/functions"
+
+echo "Creating dotfiles_old directory..."
+mkdir -p $HOME/dotfiles_old
+
+for file in $HOME/dotfiles/home/*; do
+    file_name="${file##*/}"
+
+    if [[ $(find "$HOME/.$file_name" 2>/dev/null | grep -q .) ]]; then
+        echo "Moving old .$file_name to $HOME/dotfiles_old/.$file_name..."
+        mv "$HOME/.$file_name" "$HOME/dotfiles_old/.$file_name"
+    fi
+
+    createSymLink "$file" "$HOME/.$file_name"
+done

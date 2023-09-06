@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Making sure Homebrew is installed and updated..."
+which -s brew
+if [[ $? != 0 ]]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+    brew update
+fi
+
+echo "Installing Homebrew packages..."
+brew bundle --file=$HOME/dotfiles/Brewfile

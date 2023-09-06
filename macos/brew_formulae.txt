@@ -1,8 +1,0 @@
-awscli
-gnupg
-lazygit
-leiningen
-neovim
-python
-ripgrep
-tmux

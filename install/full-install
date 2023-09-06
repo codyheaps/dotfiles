@@ -1,0 +1,43 @@
+#!/bin/bash
+
+echo "Installing codyheaps configuration for $(whoami)..."
+
+# prompt for sudo access
+sudo -p "Enter your password: " echo "We're good to go!"
+if [[ $? -ne 0 ]]; then exit 1; fi
+
+# go home to avoid any conflicts
+cd $HOME
+
+echo "Making sure Homebrew is installed and updated..."
+which -s brew
+if [[ $? != 0 ]]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+    brew update
+fi
+
+echo "Making sure zsh from Homebrew is the default shell..."
+brewpath="$(which brew | sed 's/\/brew//')"
+if [[ "$SHELL" != "$brewpath/zsh" ]]; then
+    if [[ -z "$(brew list | grep zsh)" ]]; then
+        echo "Installing..."
+        brew install zsh
+    fi
+
+    if [[ -z "$(grep -irn "$brewpath/zsh" /etc/shells)" ]]; then
+        echo "Adding to shells..."
+        sudo -s "echo '$brewpath/zsh' >> /etc/shells"
+    fi
+
+    echo "Changing to default shell..."
+    chsh -s $brewpath/zsh
+fi
+
+# retrieve latest from the gh repo
+sudo rm -rf $HOME/dotfiles
+echo "Cloning codyheaps/dotfiles to $HOME/dotfiles..."
+git clone https://github.com/codyheaps/dotfiles.git $HOME/dotfiles -q
+
+# install the dotfiles
+bash $HOME/dotfiles/install/home.sh

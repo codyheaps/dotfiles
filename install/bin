@@ -1,0 +1,18 @@
+#!/bin/bash
+
+source "$HOME/dotfiles/install/functions"
+
+sudo -p "Enter your password: " echo "We're good to go!"
+if [[ $? -ne 0 ]]; then exit 1; fi
+
+echo "Rebuilding bin in $HOME..."
+sudo rm -rf $HOME/bin
+mkdir -p $HOME/bin
+
+for file in $HOME/dotfiles/bin/*; do
+    file_name="${file##*/}"
+    createSymLink "$file" "$HOME/bin/$file_name"
+done
+
+echo "Making all files in $HOME/bin executable..."
+chmod -R +x $HOME/dotfiles/bin

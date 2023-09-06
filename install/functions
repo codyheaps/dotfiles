@@ -1,0 +1,6 @@
+#!/bin/bash
+
+createSymLink() {
+    ln -shF "$1" "$2"
+    echo "Symlinking $1 to $2"
+}
