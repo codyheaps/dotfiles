@@ -34,6 +34,11 @@ if [[ "$SHELL" != "$brewpath/zsh" ]]; then
     chsh -s $brewpath/zsh
 fi
 
+# install all the goods from homebrew here?
+# install oh my zsh?
+# install zsh-autosuggestions?
+# install powerlevel10k?
+
 # retrieve latest from the gh repo
 sudo rm -rf $HOME/dotfiles
 echo "Cloning codyheaps/dotfiles to $HOME/dotfiles..."

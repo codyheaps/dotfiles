@@ -4,7 +4,8 @@ let maplocalleader = " "
 " Vim sets
 set nocompatible
 set guicursor=a:block-Cursor
-set guicursor+=a:blinkon0
+" set guicursor+=n-v-c:blinkon0
+" set guicursor=i:blinkwait10
 set mouse="a"
 set number
 set relativenumber
@@ -21,6 +22,7 @@ set smartcase
 set scrolloff=20
 
 " IdeaVim specific
+set idearefactormode=keep
 set ideajoin
 set ideamarks
 set showmode
@@ -29,7 +31,10 @@ set showcmd
 " Plugins
 Plug "tpope/vim-surround"
 Plug "tpope/vim-commentary"
+Plug 'preservim/nerdtree'
 Plug "machakann/vim-highlightedyank"
+set which-key
+set notimeout
 
 " Vim key mappings
 nmap r <C-r>
@@ -37,13 +42,33 @@ nmap n nzzzv
 nmap N Nzzzv
 map J :m '>+1<CR>gv=gv
 map K :m '<-2<CR>gv=gv
-map <leader>p "_d
+map <leader>d "+d
+map <leader>dd "+dd
 map <leader>y "+y
-map <leader>p "_d
+map <leader>yy "+yy
+map <leader>P "+P
+map <leader>p "+p
+
+" Tab navigation
+map <C-n> :tabnext<CR>
+map <C-p> :tabprev<CR>
+
+" Pane navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " IdeaVim action mappings
-nmap <leader>bp <Action>(ToggleLineBreakpoint)
-nmap <leader>db <Action>(PhpListenDebugAction)
+vmap = <Action>(ReformatCode)
+vmap - <Action>(RenameElement)
 nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
-vmap <leader>fm <Action>(ReformatCode)
+nmap <C-Space>/ <Action>(SplitVertically)
+nmap <C-Space>- <Action>(SplitHorizontally)
+map <leader>ss <Action>(FindInPath)
+map <leader>fs <Action>(SearchEverywhere)
+nmap <leader>bp <Action>(ToggleLineBreakpoint)
+nmap <leader>db <Action>(PhpListenDebugAction)
+map <leader>ef <Action>(:cursive.repl.actions/load-file)
+map <leader>ev <Action>(:cursive.repl.actions/run-top-sexp)

@@ -1,44 +1,22 @@
-# General use
-alias lnp-env="cd ~/LMS-Projects/loanpro-devenv" # Go to loanpro-devenv dir
-alias lnp="cd ~/LMS-Projects/loanpro" # Go to loanpro project dir
-alias lnp-up="lnp-env && docker compose up -d web" # Start LMS Web & API
-alias lnp-down="lnp-env && docker compose stop web" # Stop LMS Web & API
-alias sso-login="sh ~/LMS-Projects/loanpro-devenv/scripts/sso-login.sh" # Initiate AWS SSO Login
-
-# Composer
-alias lnp-compose="lnp-env && docker compose up composer" # Run composer
-alias lnp-compose-fix="lnp-env && docker exec api_phpfpm bash -c \"cd /fandora/webroot/api && rm -rf vendor\" && lnp-compose" # Remove packages and update composer
-
-# Migrations
-alias lnp-m="cd ~/LMS-Projects/loanpro-db-migrations" # Go to loanpro-db-migrations dir
-alias lnp-migrate="lnp-m && git pull && lnp-env && docker compose up migrations" # Pull migrations and run them
-
-# Elastic
-alias lnp-index="lnp-env && docker compose up indexer" # Run indexer
-
-# LMS Angular
-alias lnp-validate="docker exec ui_php_apache bash -c \"npm run check\"" # Run grunt check
-
-# LMS API
-alias lnp-api-it="docker exec -w /fandora/webroot/api/ -it api_phpfpm bash" # Go to the API commands dir
-alias lnp-api-test="docker exec -w /fandora/webroot/api/ api_phpfpm  bash -c \"php vendor/bin/phpunit tests/Unit/\"" # Run API tests
-alias lnp-reset-default-user="docker exec api_phpfpm bash -c \"php /fandora/webroot/api/bin/cli.php tools:user:password --user=1 --password='loanprotemp'\"" # Reset LMS user password to loanprotemp
-
-# LMS Vue
-alias lnp-v2="cd ~/LMS-Projects/loanpro/webroot/lms-ui" # Go to ui-v2 dir
-alias lnp-v2-up="lnp-env && docker compose up ui-v2-node" # Start ui-v2_node
-alias lnp-v2-it="lnp-env && docker exec -it ui_v2_node bash" # Access ui-v2_node container
-alias lnp-v2-components="docker exec ui_v2_node bash -c \"yarn ca:login && yarn remove loanpro-ui && yarn add loanpro-ui\"" # Update component library
-alias lnp-v2-pretty="docker exec ui_v2_node bash -c \"yarn pretty\"" # Run prettier
-alias lnp-v2-pack="docker exec ui_v2_node bash -c \"yarn build\"" # Run build
-alias lnp-v2-test="docker exec ui_v2_node bash -c \"yarn test:unit\"" # Run tests
-alias lnp-v2-lint="docker exec ui_v2_node bash -c \"yarn lint\"" # Run linter
-alias lnp-v2-lint-fix="docker exec ui_v2_node bash -c \"yarn lint:fix\"" # Run linter
-
-# Personal
 alias clj-lint="clj-kondo --lint src"
 alias nb="git checkout -b"
 alias vim="nvim"
 alias nv="nvim"
 alias v="nvim"
 alias lg="lazygit"
+
+alias lp-devenv="cd $HOME/LMS-Projects/loanpro-devenv"
+alias lp-migrations="cd $HOME/LMS-Projects/loanpro-db-migrations"
+alias lp-configs="cd $HOME/LMS-Projects/lms-config"
+
+alias lp-up="lp-devenv && docker compose up -d web --remove-orphans"
+alias lp-down="lp-devenv && docker compose stop web"
+alias lp-compose="lp-devenv && docker compose up composer --remove-orphans"
+alias lp-compose-fix="lp-devenv && docker exec api_phpfpm bash -c \"cd /fandora/webroot/api && rm -rf vendor\" && lp-compose"
+alias lp-migrate="lp-migrations && git pull && lp-devenv && docker compose up migrations --remove-orphans"
+alias lp-index="lp-devenv && docker compose up indexer --remove-orphans"
+alias lp-reset-user="docker exec api_phpfpm bash -c \"php /fandora/webroot/api/bin/cli.php tools:user:password --user=1 --password='loanprotemp'\""
+
+function lp-connect() {
+    docker exec -it "$1" bash
+}
