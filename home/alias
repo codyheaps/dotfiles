@@ -5,6 +5,8 @@ alias nv="nvim"
 alias v="nvim"
 alias lg="lazygit"
 
+alias sso-login="sh $HOME/LMS-Projects/loanpro-devenv/scripts/sso-login.sh"
+
 alias lp-devenv="cd $HOME/LMS-Projects/loanpro-devenv"
 alias lp-migrations="cd $HOME/LMS-Projects/loanpro-db-migrations"
 alias lp-configs="cd $HOME/LMS-Projects/lms-config"
