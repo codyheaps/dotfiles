@@ -1,0 +1,15 @@
+<code_scheme name="Default" version="173">
+  <option name="OTHER_INDENT_OPTIONS">
+    <value>
+      <option name="INDENT_SIZE" value="2" />
+      <option name="TAB_SIZE" value="2" />
+    </value>
+  </option>
+  <ClojureCodeStyleSettings>
+    <option name="indentCustomisations">
+      <map>
+        <entry key="migrator.platforms.autopal.autopal-core/migrate-tenant" value="-1" />
+      </map>
+    </option>
+  </ClojureCodeStyleSettings>
+</code_scheme>
