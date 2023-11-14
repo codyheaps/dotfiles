@@ -40,8 +40,8 @@ set notimeout
 nmap r <C-r>
 nmap n nzzzv
 nmap N Nzzzv
-map J :m '>+1<CR>gv=gv
-map K :m '<-2<CR>gv=gv
+" map J :m '>+1<CR>gv=gv
+" map K :m '<-2<CR>gv=gv
 map <leader>d "+d
 map <leader>dd "+dd
 map <leader>y "+y

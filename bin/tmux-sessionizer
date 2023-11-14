@@ -17,6 +17,7 @@ tmux_running=$(pgrep tmux)
 # echo "selected_name is $selected_name"
 # echo "tmux_running is $tmux_running"
 
+# TODO: Figure out how to attach on existing session
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new-session -s $selected_name -c $selected
     exit 0
