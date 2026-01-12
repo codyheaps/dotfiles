@@ -1,0 +1,93 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "foreground": "#A06DBB",
+          "style": "plain",
+          "template": "󰇥 \uf120 {{ .UserName }}"
+        },
+        {
+          "type": "path",
+          "foreground": "#CD9B3E",
+          "options": {
+            "folder_separator_icon": "/",
+            "style": "full"
+          },
+          "style": "plain",
+          "template": " <#BBBBBB>in</> 󰝰 {{ .Path }}"
+        },
+        {
+          "type": "git",
+          "foreground": "#548386",
+          "options": {
+            "fetch_status": true,
+            "fetch_push_status": true,
+            "branch_icon": "\ue725 ",
+            "status_formats": {}
+          },
+          "style": "plain",
+          "template": " <#BBBBBB>on</> {{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "python",
+          "foreground": "#FFD43B",
+          "template": "  {{ .Full }}"
+        },
+        {
+          "type": "clojure",
+          "foreground": "#91DC47",
+          "template": "  {{ .Full }}"
+        },
+        {
+          "type": "go",
+          "foreground": "#29BEB0",
+          "template": "  {{ .Full }}"
+        },
+        {
+          "type": "java",
+          "foreground": "#007396",
+          "template": "  {{ .Full }}"
+        },
+        {
+          "type": "aws",
+          "foreground": "#FF9900",
+          "template": " 󰅟 {{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#cd5e42",
+          "style": "plain",
+          "template": "\ue3bf ",
+          "type": "root"
+        },
+        {
+          "foreground": "#979736",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#BB3629{{ end }}"
+          ],
+          "style": "plain",
+          "template": "λ ",
+          "type": "text"
+        }
+      ]
+    } 
+  ],
+  "version": 4
+}

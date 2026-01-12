@@ -62,6 +62,7 @@ map <C-l> <C-w>l
 " IdeaVim action mappings
 vmap = <Action>(ReformatCode)
 vmap - <Action>(RenameElement)
+nmap == <Action>(ReformatCode)<Action>(MethodTextObject)
 nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
 nmap <C-Space>/ <Action>(SplitVertically)
@@ -72,3 +73,5 @@ nmap <leader>bp <Action>(ToggleLineBreakpoint)
 nmap <leader>db <Action>(PhpListenDebugAction)
 map <leader>ef <Action>(:cursive.repl.actions/load-file)
 map <leader>ev <Action>(:cursive.repl.actions/run-top-sexp)
+map <leader>qd <Action>(QuickJavaDoc)
+map <leader>jd <Action>(com.github.setial.intellijjavadocs.action.JavaDocGenerateActionOnEditor)

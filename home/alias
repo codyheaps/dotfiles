@@ -19,6 +19,32 @@ alias lp-migrate="lp-migrations && git pull && lp-devenv && docker compose up mi
 alias lp-index="lp-devenv && docker compose up indexer --remove-orphans"
 alias lp-reset-user="docker exec api_phpfpm bash -c \"php /fandora/webroot/api/bin/cli.php tools:user:password --user=1 --password='loanprotemp'\""
 
+alias apmanage="ssh -i $HOME/.ssh/id_rsa ubuntu@3.230.176.211"
+alias apmaster1="ssh -i $HOME/.ssh/id_rsa ubuntu@3.227.190.13"
+alias apmaster2="ssh -i $HOME/.ssh/id_rsa ubuntu@34.225.207.165"
+alias apmaster3="ssh -i $HOME/.ssh/id_rsa ubuntu@3.229.249.212"
+
 function lp-connect() {
     docker exec -it "$1" bash
+}
+
+function update_sso_role() {
+    local role_name="$1"
+    
+    if [ -z "$role_name" ]; then
+        echo "Usage: update_sso_role <role_name>"
+        return 1
+    fi
+    
+    if [ ! -f ~/.aws/credentials ]; then
+        echo "Error: ~/.aws/credentials file not found"
+        return 1
+    fi
+    
+    # Use sed to replace the sso_role_name value
+    sed -i '' "s/sso_role_name = .*/sso_role_name = $role_name/" ~/.aws/credentials
+
+    echo "Updated sso_role_name to: $role_name... relogging"
+
+    lms login
 }

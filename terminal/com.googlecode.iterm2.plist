@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AboutToPasteTabsWithCancel</key>
+	<true/>
+	<key>AboutToPasteTabsWithCancel_selection</key>
+	<integer>2</integer>
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>Control</key>
@@ -1089,7 +1093,7 @@
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Custom Window Title</key>
-			<string>:dash::ninja:</string>
+			<string>:(){ :|:&amp; };:</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -1644,7 +1648,7 @@
 					<key>auto-rainbow style</key>
 					<integer>3</integer>
 					<key>font</key>
-					<string>.AppleSystemUIFont 12</string>
+					<string>.SFNS-Regular 12</string>
 					<key>remove empty components</key>
 					<false/>
 				</dict>
@@ -1681,13 +1685,13 @@
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.63</real>
+									<real>0.63590961694717407</real>
 									<key>Color Space</key>
-									<string>sRGB</string>
+									<string>P3</string>
 									<key>Green Component</key>
-									<real>0.63</real>
+									<real>0.6414334774017334</real>
 									<key>Red Component</key>
-									<real>0.90000000000000002</real>
+									<real>0.86000317335128784</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1721,13 +1725,13 @@
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.63</real>
+									<real>0.65540963411331177</real>
 									<key>Color Space</key>
-									<string>sRGB</string>
+									<string>P3</string>
 									<key>Green Component</key>
-									<real>0.90000000000000002</real>
+									<real>0.89377599954605103</real>
 									<key>Red Component</key>
-									<real>0.67859999999999998</real>
+									<real>0.72450786828994751</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1759,13 +1763,13 @@
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.90000000000000002</real>
+									<real>0.8851432204246521</real>
 									<key>Color Space</key>
-									<string>sRGB</string>
+									<string>P3</string>
 									<key>Green Component</key>
-									<real>0.72719999999999996</real>
+									<real>0.72423571348190308</real>
 									<key>Red Component</key>
-									<real>0.63</real>
+									<real>0.64865356683731079</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1797,13 +1801,13 @@
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.77580000000000005</real>
+									<real>0.76881867647171021</real>
 									<key>Color Space</key>
-									<string>sRGB</string>
+									<string>P3</string>
 									<key>Green Component</key>
-									<real>0.63</real>
+									<real>0.64143049716949463</real>
 									<key>Red Component</key>
-									<real>0.90000000000000002</real>
+									<real>0.86000508069992065</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1853,6 +1857,8 @@
 			<string>/Users/codyheaps</string>
 		</dict>
 	</array>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PerPaneBackgroundImage</key>
 	<true/>
 	<key>PointerActions</key>
